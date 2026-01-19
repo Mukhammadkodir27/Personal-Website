@@ -117,6 +117,12 @@
             margin-bottom: 30px;
             border-radius: 20px;
             box-shadow: 0 10px 40px var(--card-shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px var(--card-shadow);
         }
 
         h2 {
@@ -136,6 +142,13 @@
             margin-bottom: 30px;
             padding-left: 20px;
             border-left: 4px solid var(--primary-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .education-item:hover, .experience-item:hover {
+            transform: translateX(10px);
+            box-shadow: -5px 5px 15px var(--card-shadow);
         }
 
         .education-item h3, .experience-item h3 {
@@ -254,6 +267,13 @@
             padding: 30px;
             border-radius: 10px;
             border: 2px solid var(--primary-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .cv-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px var(--card-shadow);
         }
 
         .cv-section h3 {
@@ -283,6 +303,14 @@
             padding: 10px 20px;
             border-radius: 25px;
             font-weight: 500;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 10px var(--card-shadow);
+        }
+
+        .interest-tag:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px var(--card-shadow);
         }
 
         footer {
@@ -309,12 +337,12 @@
     </style>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
 
     <div class="container">
         <header>
             <h1>Mukhammadkodir Abdusalomov</h1>
-            <p class="subtitle">Data Scientist | Machine Learning Engineer</p>
+            <p class="subtitle">Data Scientist | Machine Learning Engineer | AI Engineer</p>
             <div class="contact-info">
                 <span>📍 Warsaw, Poland</span>
                 <a href="mailto:mukhammadkodirabdusalomov27@gmail.com">✉️ Email</a>
@@ -327,59 +355,66 @@
         <section id="about">
             <h2>About Me</h2>
             <div class="about-content">
-                <p>Data Scientist with a strong foundation in machine learning, econometrics, and deep learning. I hold a Bachelor's degree in Computer Science from the University of Łódź, with solid training in programming, algorithms, and data structures, and advanced academic training at the University of Warsaw. My international experience through an Erasmus program at Maastricht University has strengthened my collaboration, communication, and analytical decision-making skills.</p>
-                <br>
-                <p>I have a strong interest in predictive modeling, optimization, and end-to-end algorithmic pipelines, with ongoing focus on Generative AI, NLP, and Large Language Models (LLMs).</p>
+                <p>Data Scientist with a strong foundation in machine learning, econometrics, and deep learning. Holds a bachelor’s degree in computer science from the University of Łódź and is currently pursuing advanced training in Data Science at the University of Warsaw, with international experience through an Exchange program at Maastricht University. Experienced in building end-to-end data science workflows on real-world, messy datasets from data cleaning, EDA, and feature engineering to model selection, tuning, and evaluation. Comfortable working with automated pipelines, cross-validation, and multiple modeling approaches in both structured data and NLP tasks, with a strong interest in applied predictive modeling and Generative AI.</p>
             </div>
-        </section>
+        </section>        
 
         <section id="education">
             <h2>Education</h2>
+        
             <div class="education-item">
                 <h3>M.S. in Data Science</h3>
-                <p class="meta">University of Warsaw, Poland | 2024 – 2026 | GPA: 4.2/5.0</p>
-                <p><strong>Relevant Coursework:</strong> Machine Learning, Big Data, Econometrics, Statistics, Python, SQL</p>
+                <p class="meta">University of Warsaw, Warsaw, Poland | 2024 – 2026 | GPA: 4.2/5.0</p>
+                <p><strong>Coursework:</strong> Machine Learning, Deep Learning, NLP, Big Data, Econometrics, Statistics, Python, SQL</p>
             </div>
+        
             <div class="education-item">
-                <h3>M.S. in Business Analytics</h3>
-                <p class="meta">Maastricht University, Netherlands | 2025 - 2026 (Erasmus)</p>
-                <p><strong>Relevant Coursework:</strong> Communication, Strategic Management, Business Intelligence, Forecasting, RISK Analysis, KPI</p>
+                <h3>M.S. in Business Analytics (Exchange)</h3>
+                <p class="meta">Maastricht University, Maastricht, Netherlands | 2025 – 2026</p>
+                <p><strong>Coursework:</strong> Communication, Strategic Management, Business Intelligence, Forecasting, Risk Analysis, KPI</p>
             </div>
+        
             <div class="education-item">
                 <h3>B.S. in Computer Science</h3>
-                <p class="meta">University of Lodz, Poland | 2020 - 2024 | GPA: 4.0/5.0</p>
-                <p><strong>Relevant Coursework:</strong> Algorithms, Data Structures, Python, SQL, Computer Networks</p>
+                <p class="meta">University of Łódź, Łódź, Poland | 2020 – 2024 | GPA: 4.0/5.0</p>
+                <p><strong>Coursework:</strong> Algorithms, Data Structures, Python, SQL, Computer Networks</p>
             </div>
-        </section>
+        </section>        
 
         <section id="experience">
             <h2>Work Experience</h2>
+        
             <div class="experience-item">
                 <h3>Systems Engineer</h3>
-                <p class="meta">Infosys Poland, Lodz | June 2022 – November 2023</p>
+                <p class="meta">Infosys Poland, Łódź | June 2022 – November 2023</p>
                 <ul>
-                    <li>Partnered with finance teams to automate invoice and reporting workflows by architecting scalable Python/VBA ETL pipelines, reducing manual processing by 40%</li>
-                    <li>Managed and delivered data projects, implementing analytical solutions and optimizing workflows</li>
-                    <li>Partnered with business and technical teams to ensure seamless integration and process standardization</li>
+                    <li>Performed data cleaning, feature preparation, and exploratory analysis to support reporting and analytical use cases.</li>
+                    <li>Automated invoice and reporting workflows using Python and VBA, reducing manual work by ~30%.</li>
+                    <li>Built and maintained ETL scripts for finance data used in internal reporting and SAP-related processes.</li>
+                    <li>Worked with finance and IT teams to improve data quality and standardize reporting workflows.</li>
                 </ul>
             </div>
+        
             <div class="experience-item">
                 <h3>IT Technical Support Intern</h3>
-                <p class="meta">Infosys Poland, Lodz | March 2022 – June 2022</p>
+                <p class="meta">Infosys Poland, Łódź | March 2022 – June 2022</p>
                 <ul>
-                    <li>Developed automation tools using Python, VBA, and SQL, eliminating repetitive manual tasks</li>
-                    <li>Supported SAP module integrations, data consistency checks, and workflow optimization</li>
+                    <li>Created small automation scripts in Python, VBA, and SQL to remove repetitive manual tasks.</li>
+                    <li>Assisted with SAP data checks, basic integrations, and troubleshooting data issues.</li>
+                    <li>Supported analytics and finance teams with day-to-day technical and data-related tasks.</li>
                 </ul>
             </div>
+        
             <div class="experience-item">
                 <h3>Software Developer Intern</h3>
                 <p class="meta">VRR Immersive Technologies, Szczecin | January 2022 – February 2022</p>
                 <ul>
-                    <li>Engineered VR/AR applications using C++ and Python with OOP design patterns</li>
-                    <li>Created interactive user interfaces for immersive experiences and virtual simulations</li>
+                    <li>Developed VR/AR application components in C++ and Python using object-oriented programming.</li>
+                    <li>Implemented interactive UI elements for virtual simulations.</li>
+                    <li>Worked with designers and developers to deliver project features on time.</li>
                 </ul>
             </div>
-        </section>
+        </section>        
 
         <section id="skills">
             <h2>Skills & Technologies</h2>
@@ -879,25 +914,25 @@
         <section id="cv">
             <h2>Curriculum Vitae</h2>
             <div class="cv-section">
-                <h3>Complete Professional Profile</h3>
+                <h3>Professional Profile</h3>
                 <div class="cv-content">
                     <p><strong>Name:</strong> Mukhammadkodir Abdusalomov</p>
                     <p><strong>Location:</strong> Warsaw, Poland</p>
                     <p><strong>Email:</strong> mukhammadkodirabdusalomov27@gmail.com</p>
                     <p><strong>Phone:</strong> +48 451 609 111</p>
+                    <p><strong>Portfolio:</strong> <a href="#">Link</a></p>
                     <br>
                     <p><strong>Technical Skills:</strong></p>
-                    <p>Programming: Python (Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, Seaborn, Matplotlib), SQL, R, VBA</p>
-                    <p>Machine Learning & AI: Deep Learning, Time Series Analysis, NLP, RAG, GenAI, Hugging Face, Transformers</p>
-                    <p>Data Engineering: ETL Pipelines, Automation, Microsoft Azure, Google Cloud Platform (GCP)</p>
-                    <p>Tools: Git, GitHub, Excel, Power BI, PowerPoint, Tableau</p>
+                    <p>Python, SQL, Pandas, NumPy, Scikit-learn, TensorFlow, Keras, PyTorch, Seaborn, Matplotlib, R, VBA</p>
+                    <p>Machine Learning, Deep Learning, Statistics, Time Series Analysis, Econometrics, NLP, GenAI, LLMs (embeddings, transformers), LangChain, Hugging Face, APIs</p>
+                    <p><strong>Tools & Platforms:</strong> Git, GitHub, Power BI, Excel, Google Colab, Azure, GCP</p>
                     <br>
                     <p><strong>Languages:</strong> English (C1), Russian (C1), Polish (A2), Dutch (A1)</p>
                     <br>
                     <p><strong>Soft Skills:</strong> Analytical Thinking, Problem Solving, Business Analysis, Cross-functional Team Leadership, Communication</p>
                 </div>
             </div>
-        </section>
+        </section>        
 
         <footer>
             <p>© 2026 Mukhammadkodir Abdusalomov | Data Scientist & ML Engineer</p>
